@@ -3,7 +3,7 @@ name: workflow-run
 on:
   workflow_run:
     workflows:
-      - echo-push
+      - echo
     types:
       - completed
   
@@ -12,5 +12,5 @@ jobs:
     name: just an echo
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ github.event.workflow_run.conclusion }}
-        name: conclusion
+      - run: echo ${{ github.event.number }}
+        name: event.number

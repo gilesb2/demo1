@@ -1,4 +1,4 @@
-name: echo-push
+name: echo
 
 on:
   push:
