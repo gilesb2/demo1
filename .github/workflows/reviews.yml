@@ -1,6 +1,7 @@
 name: Review assigning
 
 on:
+  push:
   workflow_run:
     workflows:
       - echo-push
