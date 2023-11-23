@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion != 'failure' }}
     steps:
+      - run: ls /github/home
       - name: Set reviewers or merge
         uses: KaMeHb-UA/auto-review-action@v10
         with:
