@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion != 'failure' }}
     steps:
+      - uses: actions/checkout@v4
+      - run: pwd
       - run: ls /github/home
       - name: Set reviewers or merge
         uses: KaMeHb-UA/auto-review-action@v10
