@@ -16,8 +16,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: pwd
-      - run: ls /github/home
+      - run: ls
       - name: Set reviewers or merge
         uses: KaMeHb-UA/auto-review-action@v10
         with:
-          scheme-file: /github/home/review-scheme.yml
+          scheme-file: review-scheme.yml
