@@ -1,0 +1,16 @@
+name: workflow-run
+
+on:
+  workflow_run:
+    workflows:
+      - echo-push
+    types:
+      - completed
+  
+jobs:
+  echo:
+    name: just an echo
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.event.workflow_run.conclusion }}
+        name: conclusion

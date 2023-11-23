@@ -11,5 +11,5 @@ jobs:
     name: just an echo
     runs-on: ubuntu-latest
     steps:
-      - run: echo hello
       - run: echo ${{ github.event.number }}
+        name: event.number
