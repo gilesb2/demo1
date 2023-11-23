@@ -1,0 +1,19 @@
+name: Review assigning
+
+on:
+  workflow_run:
+    workflows:
+      - echo-push
+    types:
+      - completed
+  pull_request_review:
+
+jobs:
+  reviews:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion != 'failure' }}
+    steps:
+      name: Set reviewers or merge
+        uses: KaMeHb-UA/auto-review-action@v4
+        with:
+          scheme-file: /github/home/review-scheme.yml
