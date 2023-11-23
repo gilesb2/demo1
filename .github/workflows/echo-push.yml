@@ -1,0 +1,11 @@
+name: Release new action version
+
+on:
+  push
+
+jobs:
+  echo:
+    name: just an echo
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo hello
