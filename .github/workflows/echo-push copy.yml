@@ -1,0 +1,11 @@
+name: echo-push-copy
+
+on:
+  push
+
+jobs:
+  echo:
+    name: just an echo
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo hello
